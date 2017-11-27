@@ -319,7 +319,7 @@ var POKEMONS = [
         name: "Bulbizarre",
         hp: 25,
         cp: 5,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+        picture: "./assets/images/bulbizarre.png",
         types: ["Plante", "Poison"],
         created: new Date()
     },
@@ -328,7 +328,7 @@ var POKEMONS = [
         name: "Salamèche",
         hp: 28,
         cp: 6,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
+        picture: "./assets/images/salameche.png",
         types: ["Feu"],
         created: new Date()
     },
@@ -337,7 +337,7 @@ var POKEMONS = [
         name: "Carapuce",
         hp: 21,
         cp: 4,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
+        picture: "./assets/images/carapuce.png",
         types: ["Eau"],
         created: new Date()
     },
@@ -346,7 +346,7 @@ var POKEMONS = [
         name: "Aspicot",
         hp: 16,
         cp: 2,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png",
+        picture: "./assets/images/aspicot.png",
         types: ["Insecte", "Poison"],
         created: new Date()
     },
@@ -355,7 +355,7 @@ var POKEMONS = [
         name: "Roucool",
         hp: 30,
         cp: 7,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
+        picture: "./assets/images/roucool.png",
         types: ["Normal", "Vol"],
         created: new Date()
     },
@@ -364,7 +364,7 @@ var POKEMONS = [
         name: "Rattata",
         hp: 18,
         cp: 6,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
+        picture: "./assets/images/rattata.png",
         types: ["Normal"],
         created: new Date()
     },
@@ -373,7 +373,7 @@ var POKEMONS = [
         name: "Piafabec",
         hp: 14,
         cp: 5,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png",
+        picture: "./assets/images/piafabec.png",
         types: ["Normal", "Vol"],
         created: new Date()
     },
@@ -382,7 +382,7 @@ var POKEMONS = [
         name: "Abo",
         hp: 16,
         cp: 4,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png",
+        picture: "./assets/images/abo.png",
         types: ["Poison"],
         created: new Date()
     },
@@ -391,7 +391,7 @@ var POKEMONS = [
         name: "Pikachu",
         hp: 21,
         cp: 7,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png",
+        picture: "./assets/images/pikachu.png",
         types: ["Electrik"],
         created: new Date()
     },
@@ -400,7 +400,7 @@ var POKEMONS = [
         name: "Sabelette",
         hp: 19,
         cp: 3,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png",
+        picture: "./assets/images/sabelette.png",
         types: ["Normal"],
         created: new Date()
     },
@@ -409,7 +409,7 @@ var POKEMONS = [
         name: "Mélofée",
         hp: 25,
         cp: 5,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
+        picture: "./assets/images/melofee.png",
         types: ["Fée"],
         created: new Date()
     },
@@ -418,7 +418,7 @@ var POKEMONS = [
         name: "Groupix",
         hp: 17,
         cp: 8,
-        picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
+        picture: "./assets/images/groupix.png",
         types: ["Feu"],
         created: new Date()
     }
@@ -999,7 +999,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div class=\"card-action\">-->\n<!--<a (click)=\"login()\"  *ngIf=\"!authService.isLoggedIn\">Se connecter</a>-->\n<!--<a (click)=\"logout()\" *ngIf=\"authService.isLoggedIn\">Se déconnecter</a>-->\n<!--</div>-->\n<button mat-raised-button color=\"warn\" (click)=\"login({'email':'admin@sifast.com','password':'admin100'})\">Login Admin</button>\n<mat-grid-list cols=\"2\">\n  <mat-grid-tile >\n    <form class=\"forms\" [formGroup]=\"formAdd\" novalidate (ngSubmit)=\"addUser(formAdd.value, formAdd.valid)\">\n      <h1>Add user</h1>\n      <div formGroupName=\"name\">\n        <mat-form-field>\n          <input matInput required formControlName=\"first\" placeholder=\"First\">\n          <mat-error *ngIf=\"formAdd.controls.name.controls.first.hasError('required')\">\n            {{validationMessages.name.first.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.name.controls.first.hasError('minlength')\">\n            {{validationMessages.name.first.minlength}}\n          </mat-error>\n        </mat-form-field>\n        <mat-form-field>\n          <input matInput required formControlName=\"last\" placeholder=\"Last\">\n          <mat-error *ngIf=\"formAdd.controls.name.controls.last.hasError('required')\">\n            {{validationMessages.name.last.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.name.controls.last.hasError('minlength')\">\n            {{validationMessages.name.last.minlength}}\n          </mat-error>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field>\n        <input matInput required formControlName=\"email\" placeholder=\"Email\">\n        <mat-error *ngIf=\"formAdd.controls.email.hasError('required')\">{{validationMessages.email.required}}</mat-error>\n        <mat-error *ngIf=\"formAdd.controls.email.hasError('pattern')\">{{validationMessages.email.pattern}}</mat-error>\n\n      </mat-form-field>\n\n      <div formGroupName=\"verification\">\n        <mat-form-field>\n          <input matInput required formControlName=\"password\" placeholder=\"Password\">\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.password.hasError('required')\">\n            {{validationMessages.verification.password.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.password.hasError('minlength')\">\n            {{validationMessages.verification.password.minlength}}\n          </mat-error>\n        </mat-form-field>\n        <mat-form-field>\n          <input matInput required formControlName=\"passwordConfirm\" placeholder=\"Password Confirmation\">\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.passwordConfirm.hasError('required')\">\n            {{validationMessages.verification.passwordConfirm.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.passwordConfirm.hasError('minlength')\">\n            {{validationMessages.verification.passwordConfirm.minlength}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.getError('validateEqual', ['passwordConfirm'])\">\n            {{validationMessages.verification.passwordConfirm.validateEqual}}\n          </mat-error>\n        </mat-form-field>\n      </div>\n      <button [disabled]=\"formAdd.invalid\" mat-raised-button color=\"accent\">Add user</button>\n    </form>\n  </mat-grid-tile>\n  <mat-grid-tile >\n    <form class=\"forms\" [formGroup]=\"formLogin\" novalidate (ngSubmit)=\"login(formLogin.value, formLogin.valid)\">\n      <h1>Login</h1>\n      <mat-form-field>\n        <input matInput required formControlName=\"email\" placeholder=\"Email\">\n        <mat-error *ngIf=\"formLogin.controls.email.hasError('required')\">{{validationMessages.email.required}}\n        </mat-error>\n        <mat-error *ngIf=\"formLogin.controls.email.hasError('pattern')\">{{validationMessages.email.pattern}}</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput required formControlName=\"password\" placeholder=\"Password\">\n        <mat-error *ngIf=\"formLogin.controls.password.hasError('required')\">\n          {{validationMessages.verification.password.required}}\n        </mat-error>\n        <mat-error *ngIf=\"formLogin.controls.password.hasError('minlength')\">\n          {{validationMessages.verification.password.minlength}}\n        </mat-error>\n      </mat-form-field>\n\n      <button [disabled]=\"formLogin.invalid\" mat-raised-button color=\"warn\">Login</button>\n\n    </form>\n  </mat-grid-tile>\n</mat-grid-list>\n"
+module.exports = "<!--<div class=\"card-action\">-->\n<!--<a (click)=\"login()\"  *ngIf=\"!authService.isLoggedIn\">Se connecter</a>-->\n<!--<a (click)=\"logout()\" *ngIf=\"authService.isLoggedIn\">Se déconnecter</a>-->\n<!--</div>-->\n<button mat-raised-button color=\"warn\" (click)=\"login({'email':'admin@sifast.com','password':'admin100'})\">Login Admin</button>\n<mat-grid-list cols=\"2\">\n  <mat-grid-tile >\n    <form class=\"forms\" [formGroup]=\"formAdd\" novalidate (ngSubmit)=\"addUser(formAdd.value, formAdd.valid)\">\n      <h1>Add user</h1>\n      <div formGroupName=\"name\">\n        <mat-form-field>\n          <input matInput required formControlName=\"first\" placeholder=\"First\">\n          <mat-error *ngIf=\"formAdd.controls.name.controls.first.hasError('required')\">\n            {{validationMessages.name.first.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.name.controls.first.hasError('minlength')\">\n            {{validationMessages.name.first.minlength}}\n          </mat-error>\n        </mat-form-field>\n        <mat-form-field>\n          <input matInput required formControlName=\"last\" placeholder=\"Last\">\n          <mat-error *ngIf=\"formAdd.controls.name.controls.last.hasError('required')\">\n            {{validationMessages.name.last.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.name.controls.last.hasError('minlength')\">\n            {{validationMessages.name.last.minlength}}\n          </mat-error>\n        </mat-form-field>\n      </div>\n\n      <mat-form-field>\n        <input matInput required formControlName=\"email\" placeholder=\"Email\">\n        <mat-error *ngIf=\"formAdd.controls.email.hasError('required')\">{{validationMessages.email.required}}</mat-error>\n        <mat-error *ngIf=\"formAdd.controls.email.hasError('pattern')\">{{validationMessages.email.pattern}}</mat-error>\n\n      </mat-form-field>\n\n      <div formGroupName=\"verification\">\n        <mat-form-field>\n          <input type=\"password\" matInput required formControlName=\"password\" placeholder=\"Password\">\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.password.hasError('required')\">\n            {{validationMessages.verification.password.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.password.hasError('minlength')\">\n            {{validationMessages.verification.password.minlength}}\n          </mat-error>\n        </mat-form-field>\n        <mat-form-field>\n          <input type=\"password\" matInput required formControlName=\"passwordConfirm\" placeholder=\"Password Confirmation\">\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.passwordConfirm.hasError('required')\">\n            {{validationMessages.verification.passwordConfirm.required}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.controls.passwordConfirm.hasError('minlength')\">\n            {{validationMessages.verification.passwordConfirm.minlength}}\n          </mat-error>\n          <mat-error *ngIf=\"formAdd.controls.verification.getError('validateEqual', ['passwordConfirm'])\">\n            {{validationMessages.verification.passwordConfirm.validateEqual}}\n          </mat-error>\n        </mat-form-field>\n      </div>\n      <button [disabled]=\"formAdd.invalid\" mat-raised-button color=\"accent\">Add user</button>\n    </form>\n  </mat-grid-tile>\n  <mat-grid-tile >\n    <form class=\"forms\" [formGroup]=\"formLogin\" novalidate (ngSubmit)=\"login(formLogin.value, formLogin.valid)\">\n      <h1>Login</h1>\n      <mat-form-field>\n        <input matInput required formControlName=\"email\" placeholder=\"Email\">\n        <mat-error *ngIf=\"formLogin.controls.email.hasError('required')\">{{validationMessages.email.required}}\n        </mat-error>\n        <mat-error *ngIf=\"formLogin.controls.email.hasError('pattern')\">{{validationMessages.email.pattern}}</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <input type=\"password\" matInput required formControlName=\"password\" placeholder=\"Password\">\n        <mat-error *ngIf=\"formLogin.controls.password.hasError('required')\">\n          {{validationMessages.verification.password.required}}\n        </mat-error>\n        <mat-error *ngIf=\"formLogin.controls.password.hasError('minlength')\">\n          {{validationMessages.verification.password.minlength}}\n        </mat-error>\n      </mat-form-field>\n\n      <button [disabled]=\"formLogin.invalid\" mat-raised-button color=\"warn\">Login</button>\n\n    </form>\n  </mat-grid-tile>\n</mat-grid-list>\n"
 
 /***/ }),
 
@@ -1377,7 +1377,7 @@ var DialogContentExampleDialog = (function () {
             "name": "",
             "hp": 0,
             "cp": 0,
-            "picture": "http://static.pokemonpets.com/images/monsters-images-800-800/4221-Unown-U.png",
+            "picture": "./assets/images/sample.png",
             "types": [],
             "created": new Date()
         };
